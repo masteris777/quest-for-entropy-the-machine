@@ -84,8 +84,11 @@ are a filing system, not a claim about anything.
 **Source headers were normalized for public release**: comment and docstring references
 to the private research tree — internal run commands, lab-goal and feedback documents,
 cross-lab report names — were replaced with plain descriptions of what each file does.
-**The executable code is unmodified**; only comments and docstrings changed, and
-`run_all.py` re-verifies every number against the stripped files that actually ship.
+**The executable logic is unmodified.** Only comments and docstrings changed, with one
+stated exception: a single diagnostic *message string* in `ratio_surface_167b.py` named an
+internal review document, and that name was removed. No control flow, no arithmetic, no
+constant used by any calculation was touched anywhere. `run_all.py` re-verifies every
+number against the stripped files that actually ship.
 
 `machine/` contains only the files the fold actually needs, nothing else — no reports,
 no figures, no unrelated stages:

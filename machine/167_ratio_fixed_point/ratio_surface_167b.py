@@ -375,7 +375,7 @@ def main():
         return finish("DERIVED-MISMATCH",
                       f"ANCHOR-1 failed in the extended path: |{D_cert_fine:.6f} - "
                       f"{D_HELD_91:.6f}| = {dev_a1:.6f} > TOL_A1 {TOL_A1:.6f}. "
-                      f"Surface not computed (stop-on-failure per feedback-2).")
+                      f"Surface not computed (stop-on-failure).")
 
     # =================================================================
     print("\n" + "=" * 70)
