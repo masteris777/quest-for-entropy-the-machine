@@ -215,7 +215,7 @@ I'm a software architect. The physics and the deep math are what I'm curious abo
 
 ## Next time
 
-Episode three: **the machine sits a twenty-question quantum exam.** What we asked, what it did, and every number — including the one place it cannot follow quantum mechanics, how far short it falls, and why that gap turns out to be a law rather than a bug.
+Episode three: **the machine sits a twenty-question quantum exam.** What we asked, what it did, and every number — including the one place it cannot follow quantum mechanics, how far short it falls, and why that gap looks like a law rather than a bug — though we have not proved that it is one.
 
 ---
 
