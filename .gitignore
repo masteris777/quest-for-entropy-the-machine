@@ -1,0 +1,3 @@
+# nothing here is generated at run time - run_all.py prints, it does not write.
+__pycache__/
+*.pyc

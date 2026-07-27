@@ -1,0 +1,126 @@
+==============================================================================
+THE MACHINE - companion evidence pack (Quest for Entropy #2)
+==============================================================================
+Scope: the MECHANISM. The twenty-question exam and the interference floor
+       are episode 3's evidence and are deliberately not in this pack.
+
+recipe theta_91 (frozen, from machine/99_variational_floor/metrics_99.json):
+  m_g=1.3125001259 s_g=0.0065267169
+  m_1=0.5368345174 s_1=0.8672212570
+  m_2=0.5107531575 s_2=0.5629787852
+
+frame: lab91.haar_frame(91) - chosen once, frozen, never re-tuned
+building the rotor pool (square-free rates + near-resonance screen)...
+  96 rotors, 96 square-free integers, max n = 709
+
+running the machine for 5000 folds...
+  instrumented loop vs lab100.run_model_two outcome stream: IDENTICAL over 5000 folds
+
+==============================================================================
+ARTICLE NUMBERS vs THIS RUN'S MEASURED VALUES
+==============================================================================
+
+[PASS] 1. Pool structure: 96 rotors as 16 generators x 6 channels, rates omega = 2*pi*frac(sqrt(n)) over distinct square-free n, none rationally locked
+       pool shape
+           measured: 16 generators x 6 channels = 96 rotors, 96 integers recorded
+           expected: 16 x 6 = 96 rotors, 96 integers
+       integers distinct
+           measured: 96 distinct of 96  (first: [2, 3, 5, 11, 29, 46], max: 709)
+           expected: all 96 distinct
+       every integer square-free
+           measured: 96/96 square-free
+           expected: 96/96
+       rate law omega = 2*pi*frac(sqrt(n))
+           measured: max |omega_measured - 2*pi*frac(sqrt(n))| = 0.000e+00
+           expected: < 1e-12
+       candidate stream skips the squares (article names 4, 8, 9, 12)
+           measured: first 12 candidates = [2, 3, 5, 6, 7, 10, 11, 13, 14, 15, 17, 19]
+           expected: [2, 3, 5, 6, 7, 10, 11, 13, 14, 15, 17, 19]
+       no two rates rationally locked (exact test over all 4560 pairs: n_i*n_j is never a perfect square, so p*sqrt(n_i) - q*sqrt(n_j) is never an integer, at any order p, q)
+           measured: 0 locked pairs, 0 self-locked rates
+           expected: 0 and 0
+       note: supplementary (not the proof): closest low-order near-resonance over all pairs and p,q <= 8 is 4.759e-05 rad - small, never zero.
+
+[PASS] 2. The traced fold at tick t = 1000 of the certified run
+       the three arrow lengths the observer compares
+           measured: 1.424979609, 0.377518968, 0.416932983
+           expected: 1.424979609, 0.377518968, 0.416932983
+       the winner (index in code; 'the first one wins')
+           measured: index 0
+           expected: index 0
+       the generator read (1000 mod 16)
+           measured: 8  (1000 mod 16 = 8)
+           expected: 8
+       the three re-prepared magnitudes (g, c1, c2)
+           measured: 1.311574829, 0.927769907, 0.496544010
+           expected: 1.311574829, 0.927769907, 0.496544010
+       'the arrows ARE the state': arrow lengths of the freshly written state
+           measured: max |new arrow - written magnitude| = 4.441e-16
+           expected: < 1e-12 (identical)
+
+[PASS] 3. Winner pinned, losers wander
+       folds measured
+           measured: 5000
+           expected: >= 4000
+       winner amplitude: spread and centre
+           measured: spread 0.006526  (range 1.309237 .. 1.315763)
+           expected: spread ~0.0065, essentially fixed near 1.3125
+       loser 1 amplitude range
+           measured: 0.1035 .. 0.9704  (spread 0.8669)
+           expected: roughly 0.10 .. 0.97
+       loser 2 amplitude range
+           measured: 0.2295 .. 0.7920  (spread 0.5625)
+           expected: roughly 0.23 .. 0.79
+       wander ratio (smallest loser spread / winner spread)
+           measured: 86.2x   (loser 1: 132.8x, loser 2: 86.2x)
+           expected: > 50x - the winner is pinned, the losers roam
+
+[PASS] 4. The lean: the winner sits about two and a half times the losers
+       DEFINITION USED (load-bearing): lean = g / mean(c1, c2), per event
+           measured: g / (0.5 * (c1 + c2))
+           expected: the article's form - the mean, not the max
+       median per-event lean
+           measured: 2.5048
+           expected: ~2.50
+       band-centre ratio m_g / mean(m_1, m_2) of the frozen recipe
+           measured: 2.5057570977
+           expected: 2.5057570976993087
+       per-event range (this is a MEDIAN, not a constant)
+           measured: 1.4902 .. 7.5607 over 5000 folds
+           expected: roughly 1.49 .. 7.56
+       same data under the OTHER definition, for the avoidance of doubt
+           measured: median of g / max(c1, c2) = 1.9681
+           expected: ~1.99 - a different number for a different definition; the article's '2.5' is the mean form above
+
+[PASS] 5. Zero back-action: the observer has no effect on the clockwork
+       max |rotor phase with folds - rotor phase with no folds| over 5000 ticks x 16 generators x 6 channels
+           measured: 0.0
+           expected: 0.0 exactly (bit-identical trajectory)
+
+[PASS] 6. Repeatability: re-measure immediately (before the substrate turn) and the same arrow still wins
+       trials
+           measured: 5000
+           expected: >= 300
+       same winner on immediate re-measurement
+           measured: 5000/5000
+           expected: 5000/5000 - the collapse postulate, never written down anywhere
+
+[PASS] 7. The derived ratio: the fixed point r* of the counting geometry, and the certified recipe sitting on it
+       r* (joint optimum in (r, s1, s2)) - READ from the frozen Lab 167b record
+           measured: 2.505144 +/- 0.002120
+           expected: 2.505144 (article's 2.50514)
+       the certified recipe's ratio - RECOMPUTED live from theta_91 (machine/99_variational_floor/metrics_99.json)
+           measured: 2.505757   (Lab 167b anchored against 2.505757; agrees: True)
+           expected: 2.505757
+       gap between the optimizer's recipe and the derived fixed point
+           measured: |2.505757 - 2.505144| = 0.000613
+           expected: ~0.0006, and inside Lab 167b's declared r-axis location tolerance 0.0338
+       Lab 167b verdict of record
+           measured: DERIVED-MATCH
+           expected: DERIVED-MATCH
+       note: HONEST SCOPE: item 7 is the only item on this page that is not re-derived from scratch here. The r* derivation (Lab 167b) needs the Lab 122 three-channel lift chain and ~7 minutes of certified quadrature, which is out of scope for a mechanism pack. What runs here reads the frozen metrics_167b.json, recomputes the certified ratio live from theta_91, and checks the two against each other. The derivation script (ratio_surface_167b.py) ships alongside for line-by-line diffing against the research repo; to re-run it you need the full lab tree.
+       note: The lean is therefore FORCED, not chosen - but the piece of that argument you can execute here is the arithmetic, not the geometry.
+
+==============================================================================
+ALL 7 MECHANISM CLAIMS REPRODUCED   (0.3s)
+==============================================================================
