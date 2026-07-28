@@ -141,10 +141,6 @@ into a **public honesty ledger** rather than quietly out of the record. Nothing 
 repository comes from a model's memory: every number is printed by code you can run, and
 `run_all.py` fails loudly if any of them stops reproducing.
 
-## Citing
-
-Archived, citable snapshot: **DOI to-be-minted-at-publication (Zenodo).**
-
 ## License
 
 Code: MIT. Article text and figures: CC BY 4.0. See `LICENSE`.
