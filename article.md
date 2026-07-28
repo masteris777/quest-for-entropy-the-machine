@@ -149,10 +149,9 @@ Lean too little and the machine keeps no memory of what it saw, so the counts co
 
 **Watching versus touching.** Now the switch that matters most. Run the same machine two ways:
 
-| | what the observer does | statistics it counts |
-|---|---|---|
-| **watch** | reads the arrows, writes down the winner, changes nothing | **classical** |
-| **fold** | reads, writes down the winner, *and rewrites the state* | **quantum** |
+**WATCH** — the observer reads the arrows, writes down the winner, and changes nothing else. The statistics it counts come out **classical**.
+
+**FOLD** — the observer reads, writes down the winner, *and rewrites the state*. The statistics come out **quantum**.
 
 Same rotors, same frame, same "pick the longest" rule. The only difference is whether the reading rewrites anything.
 
