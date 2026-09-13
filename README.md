@@ -1,5 +1,7 @@
 # The Machine — companion repository
 
+**Article:** [Quest for Entropy #2 — "The Machine"](https://questforentropy.substack.com/p/the-machine)
+
 Evidence repo for **Quest for Entropy #2: [“The Machine”](article.md)** — the piece that
 takes the clockwork apart. Ninety-six free-running rotors, a three-number state, and the
 one move that makes the whole thing quantum-looking: **the fold**.
