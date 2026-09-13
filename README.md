@@ -2,6 +2,8 @@
 
 **Article:** [Quest for Entropy #2 — "The Machine"](https://questforentropy.substack.com/p/the-machine)
 
+**Series:** ← [#1 The Universe with No Dice](https://github.com/masteris777/quest-for-entropy-the-universe-with-no-dice) · [#3 The Machine Takes a Quantum Exam](https://github.com/masteris777/quest-for-entropy-quantum-exam) →
+
 Evidence repo for **Quest for Entropy #2: [“The Machine”](article.md)** — the piece that
 takes the clockwork apart. Ninety-six free-running rotors, a three-number state, and the
 one move that makes the whole thing quantum-looking: **the fold**.
