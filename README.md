@@ -1,6 +1,6 @@
 # The Machine — companion repository
 
-**Article:** [Quest for Entropy #2 — "The Machine"](https://questforentropy.substack.com/p/the-machine)
+**Article:** [Quest for Entropy #2 — "The Machine"](https://questforentropy.com/p/the-machine) · also on [Substack](https://questforentropy.substack.com/p/the-machine)
 
 **Series:** ← [#1 The Universe with No Dice](https://github.com/masteris777/quest-for-entropy-the-universe-with-no-dice) · [#3 The Machine Takes a Quantum Exam](https://github.com/masteris777/quest-for-entropy-quantum-exam) →
 
